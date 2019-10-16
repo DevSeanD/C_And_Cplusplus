@@ -1,0 +1,209 @@
+#include <iostream>
+#include <chrono>
+#include <thread> // used for timer functions
+using namespace std;
+
+/*
+    void french_press()
+        Postcondition - The program will complete three fifty-five second time intervals. The user will be required to
+                        input in order to move on to the next interval.
+
+    void areo_press()
+    	Postcondition - The function will complete two fifty-five second time intervals. The user will be required to 
+			input in order to move on to the next interval
+    void instructions()
+    	Postcondition - Provide the user with instructions on brewing techniques.
+*/
+
+void french_press(){
+	int input = 0;
+	int x = 1;
+	while(x <= 3){	
+		if(x != 3){
+			cout << "Interval # " << x << " has now begun" << endl;
+	                this_thread::sleep_for(chrono::seconds(55));
+        	        cout << "Interval # " << x << " has ended, enter 1 to continue" << endl;
+                	cin >> input;
+			cout << " " << endl;
+			cout << " " << endl;
+			while(input != 1){
+				switch(input){
+			       		case 1:
+						break;
+					default: 
+						cout << "Input not valid, Please enter again" << endl;
+						cin >> input;
+					       	break;
+				}		
+			}
+		}
+		else{
+			cout << "Interval # " << x << " has now begun" << endl;
+			this_thread::sleep_for(chrono::seconds(55));
+			cout << "Interval # " << x << " has ended" << endl;
+			cout << " " << endl;
+			cout << " " << endl;
+			cout << "This brew session has ended. Enjoy your coffee :)" << endl;
+			cout << " " << endl;
+			cout << " " << endl;
+			return;
+	
+		}
+	
+		x++;	
+	}
+} 
+
+void areo_press(){
+	int input = 0;
+	int x = 1;
+		
+	while(x<=2){
+		if(x!=2){	
+			cout << "Interval # " << x << " has begun" <<  endl;
+			this_thread::sleep_for(chrono::seconds(55));
+			cout << "Interval # " << x << " has ended, enter 1 to continue" << endl;	
+			cin >> input;	
+			cout << " " << endl;
+			cout << " " << endl;
+			
+			while(input!=1){
+
+				switch(input){
+					case 1: 
+						break;
+					default:
+						cout << "Input not valid, please enter again" << endl;
+						cin >> input;
+						cout << " " << endl;
+						cout << " " << endl;
+						break;
+
+				}		
+			}		
+		}
+		else{
+			cout << "Interval # " << x << " has begun" << endl;
+			this_thread::sleep_for(chrono::seconds(55));
+			cout << "Interval # " << x << " has ended" << endl;
+			cout << " " << endl;
+			cout << " " << endl;
+			cout << "This brew session has ended. Enjoy your coffee :)" << endl; 
+			cout << " " << endl;
+			cout << " " << endl;
+		}
+		x++;
+	}	
+}
+
+void instructions(){
+	int input = 0;
+	bool run_instruct = true;
+
+	while(run_instruct != false){
+	cout << "***********" << endl; 
+	cout << "Recipe menu" << endl;
+	cout << "***********" << endl;
+	cout << "(1) French press recipe" << endl;
+        cout << "(2) Areo press recipe" << endl;
+        cout << "(3) Exit to main menu" << endl;
+        cin >> input;
+
+	switch(input){
+		case 1: 
+			cout << "********************" << endl;
+			cout << "French press recipie" << endl;
+			cout << "********************" << endl;
+			cout << " " << endl;
+			cout << " " << endl;
+			cout << "1  -  Fill the french press with 3-4 scoops of coffee." << endl;
+			cout << "2  -  Add boiling water such that there is only enough water to submerge all of the beans." << endl;
+			cout << "3  -  Stir clock-wise 5 times, then counter clock-wise 5 times." << endl;
+			cout << "4  -  Wait 55 seconds for infusion to occur." << endl;
+			cout << "5  -  Add boiling water such that 1/2 of the french press is filled." << endl;
+			cout << "6  -  Repeat step 3." << endl;
+			cout << "7  -  Repeat step 4." << endl;
+	      	 	cout << "8  -  Add boiling water such that all of the french press is filled." << endl;
+			cout << "9  -  Repead step 3." << endl;
+			cout << "10 -  Repeat step 4." << endl;
+			cout << "11 -  Place top on french press and slowly with constant force, plunge the coffee." << endl;
+			cout << "12 -  Serve and enjoy."<< endl;
+			cout << " " << endl;
+			cout << " " << endl;
+			break; 
+		case 2: 
+			cout << "*******************" << endl;
+                        cout << "Areo press recipie" << endl;
+        	        cout << "*******************" << endl;
+        	        cout << " " << endl;
+        	        cout << " " << endl;
+        	        cout << "1  -  Stand the Areo press for inverted brewing style" << endl;
+        	        cout << "2  -  Add boiling water such that the Areo Press in half filled" << endl;
+        	        cout << "3  -  Stir clock-wise 5 times, then counter clock-wise 5 times." << endl;
+        	        cout << "4  -  Wait 55 seconds for infusion to occur." << endl;
+        	        cout << "5  -  Add boiling water such that Areo press is filled(leaving some room for when reverting during brewing)." << endl;
+        	        cout << "6  -  Repeat step 4." << endl;
+        	        cout << "7  -  Revert the Areo press over a container and slowly with constant force ,plunge the coffee." << endl;
+        	        cout << "8  -  Serve and enjoy."<< endl;
+			cout << " " << endl;
+			cout << " " << endl;
+        	        break;
+		case 3:
+			run_instruct = false;
+			break;
+		default:
+			cout << "Input invalid, please enter again" << endl;
+
+		}
+	}
+
+}
+
+void main_menu(){	
+	cout <<"*********" << endl;	
+	cout <<"Main menu" << endl;
+	cout <<"*********" << endl;
+	cout <<"(1) Recipies" << endl;
+	cout <<"(2) French press timer" << endl;
+	cout <<"(3) Areo press timer" << endl;
+	cout <<"(4) Exit" << endl;
+
+}
+
+
+int main(){
+	int input = 0;
+	bool run_main = true;
+	cout << " " << endl;
+	cout << "Welcome to Coffee Timer, the goal of this application is to assist users in brewing french press and areo press coffee." << endl;
+        cout << " " << endl;
+	cout << " " << endl;
+	while(run_main != false){
+		main_menu();
+		cin >> input;
+		switch(input){
+			case 1:
+				cout << " " << endl;
+				cout << " " << endl;
+				instructions();
+				break;
+			case 2:
+			        cout << " " << endl;
+				cout << " " << endl;	
+				french_press();
+				break;
+			case 3:
+				cout << " " << endl;
+				cout << " " << endl;
+				areo_press();
+				break;
+			case 4: 
+				run_main = false;
+				break;
+			default:
+				cout << "Input invalid, please enter again" << endl;
+				break;
+		}
+	}
+	return 0;
+}
