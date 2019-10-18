@@ -137,14 +137,16 @@ void instructions(){
         	        cout << "*******************" << endl;
         	        cout << " " << endl;
         	        cout << " " << endl;
-        	        cout << "1  -  Stand the Areo press for inverted brewing style" << endl;
-        	        cout << "2  -  Add boiling water such that the Areo Press in half filled" << endl;
+        	        cout << "1  -  Stand the Areo press for inverted brewing style." << endl;
+        	        cout << "2  -  Add boiling water such that the Areo Press in half filled." << endl;
         	        cout << "3  -  Stir clock-wise 5 times, then counter clock-wise 5 times." << endl;
         	        cout << "4  -  Wait 55 seconds for infusion to occur." << endl;
         	        cout << "5  -  Add boiling water such that Areo press is filled(leaving some room for when reverting during brewing)." << endl;
-        	        cout << "6  -  Repeat step 4." << endl;
-        	        cout << "7  -  Revert the Areo press over a container and slowly with constant force ,plunge the coffee." << endl;
-        	        cout << "8  -  Serve and enjoy."<< endl;
+			cout << "6  -  Add filter to filter cap then pour hot water though the filter(rids filter of paper taste)." << endl;
+			cout << "7  -  Screw filter cap onto Areo press." << endl;
+        	        cout << "8  -  Repeat step 4." << endl;
+        	        cout << "9  -  Revert the Areo press over a container and slowly with constant force ,plunge the coffee." << endl;
+        	        cout << "10 -  Serve and enjoy."<< endl;
 			cout << " " << endl;
 			cout << " " << endl;
         	        break;
@@ -160,6 +162,8 @@ void instructions(){
 }
 
 void main_menu(){	
+	cout << " " << endl;
+	cout << " " << endl;
 	cout <<"*********" << endl;	
 	cout <<"Main menu" << endl;
 	cout <<"*********" << endl;
