@@ -17,8 +17,25 @@ using namespace std;
 
 void french_press(){
 	int input = 0;
+	int counter = 0;
 	int x = 1;
-	while(x <= 3){	
+	while(x <= 3){
+		if(counter == 0){
+			cout << "Enter 1 to begin the first time interval" << endl;
+			cin >> input;
+			counter++;
+		}
+		while(input != 1){
+			switch(input){
+				case 1:
+					break;
+				default:
+					cout << "Input not valid, Please enter 1 to continue" << endl;
+					cin >> input;
+					break;
+			}
+		}
+		cout << " " << endl;	
 		if(x != 3){
 			cout << "Interval # " << x << " has now begun" << endl;
 	                this_thread::sleep_for(chrono::seconds(55));
@@ -31,7 +48,7 @@ void french_press(){
 			       		case 1:
 						break;
 					default: 
-						cout << "Input not valid, Please enter again" << endl;
+						cout << "Input not valid, Please enter 1 to continue" << endl;
 						cin >> input;
 					       	break;
 				}		
@@ -40,9 +57,9 @@ void french_press(){
 		else{
 			cout << "Interval # " << x << " has now begun" << endl;
 			this_thread::sleep_for(chrono::seconds(55));
-			cout << "Interval # " << x << " has ended" << endl;
+			cout << "Interval # " << x << " has ended" << endl; 
 			cout << " " << endl;
-			cout << " " << endl;
+		       	cout << " " << endl;
 			cout << "This brew session has ended. Enjoy your coffee :)" << endl;
 			cout << " " << endl;
 			cout << " " << endl;
@@ -56,9 +73,25 @@ void french_press(){
 
 void areo_press(){
 	int input = 0;
-	int x = 1;
-		
+	int counter = 0;
+	int x = 1;		
 	while(x<=2){
+		if(counter == 0){
+                        cout << "Enter 1 to begin the first time interval" << endl;
+                        cin >> input;
+                        counter++;
+                }
+		while(input != 1){
+                        switch(input){
+                                case 1:
+                                        break;
+                                default:
+                                        cout << "Input not valid, Please enter 1 to continue" << endl;
+                                        cin >> input;
+                                        break;
+                        }
+                }
+		cout << " " << endl;
 		if(x!=2){	
 			cout << "Interval # " << x << " has begun" <<  endl;
 			this_thread::sleep_for(chrono::seconds(55));
@@ -73,7 +106,7 @@ void areo_press(){
 					case 1: 
 						break;
 					default:
-						cout << "Input not valid, please enter again" << endl;
+						cout << "Input not valid, please enter 1 to continue" << endl;
 						cin >> input;
 						cout << " " << endl;
 						cout << " " << endl;
