@@ -1,5 +1,5 @@
 //Sean Dever
-//permutations.py
+//Permutations.py
 //Description: This program proves the permuations of the specified array. It then uses vectors to store the master list of permutations.
 
 #include <iostream>
