@@ -5,7 +5,7 @@
 
 
 int main() {
-  std::cout << "Hello World!\n";
+  std::cout << "Welcome to Time Elapsed\n";
   
   clock_t time_req; // create clock_t object
   time_req = clock(); // set clock_t object to starting clock
@@ -15,6 +15,6 @@ int main() {
     value++;
   }
   
-  time_req = clock() - time_req; // difference between stop and end clocks
+  time_req = clock() - time_req; // difference between end and start clocks
 	std::cout << "The for loop took " << (float)time_req/CLOCKS_PER_SEC << " seconds" << std::endl; // CLOCKS_PER_SEC the needed ratio of the clocks of this processor per second
 }
